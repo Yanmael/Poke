@@ -3,8 +3,16 @@ const nextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["raw.githubusercontent.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+      },
+    ],
   },
+  // images: {
+  //   domains: ["raw.githubusercontent.com"],
+  // },
 };
 
 export default nextConfig;
